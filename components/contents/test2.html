@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설문조사</title>
+</head>
+<body>
+    <h1>설문조사</h1>
+    <form action="/submit-survey" method="post">
+			<div>
+        이름: <input type="text" name="name" placeholder="이름 입력" required><br>
+        비밀번호: <input type="password" name="pswd" placeholder="비밀번호 입력" required>
+			</div><br>
+				<div>
+					*성별<br>
+					남성 <input type="radio" name="gender" value="남성" required>
+					여성 <input type="radio" name="gender" value="여성" required>
+				</div><br>
+
+        *생일:<br>
+				<input type="date" name="dob" required> <br><br>
+				<hr><br>
+
+				<div>
+					1.좋아하는 색상<br>
+					빨강 <input type="checkbox" name="color" value="빨강">
+					파랑 <input type="checkbox" name="color" value="파랑">
+					초록 <input type="checkbox" name="color" value="초록"><br><br>
+
+					2.좋아하는 숫자<br>
+					<input type="number" name="favoriteNumber" min="1" max="100" placeholder="선호하는 숫자" required><br><br>
+					
+					3.제출 이미지<br>
+					<input type="file" name="fileUpload" accept=".jpg,.png,.pdf"> <br><br>
+					3. 건의사항<br>
+					<textarea name="opinion" rows="4" cols="50" placeholder="건의사항을 입력하세요"></textarea></div><br>
+				<hr>
+
+        <button type="submit">제출</button>
+    </form>
+</body>
+</html>
